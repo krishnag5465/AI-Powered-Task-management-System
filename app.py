@@ -142,3 +142,5 @@ for member, tasks in st.session_state.team.items():
 # ---------------- FOOTER ----------------
 st.markdown("---")
 st.markdown("💡 Built with Streamlit | Advanced UI Version")
+model = joblib.load("final_model.pkl")
+category = model.predict([task])[0]
